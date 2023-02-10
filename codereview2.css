@@ -10,12 +10,6 @@ html {
   height: 100%;
 }
 
-a,
-a:active {
-  text-decoration: none;
-  color: yellowgreen;
-}
-
 .hero-image {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://cdn.pixabay.com/photo/2016/07/13/23/09/work-1515801__340.jpg");
   height: 50%;
@@ -32,21 +26,33 @@ a:active {
   color: white;
 }
 
+.increase {
+  background-color: green;
+}
+
 footer {
   background-color: black;
-  color: black;
   padding: 1rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-footer .footer_links {
-  display: flex;
-  width: 80%;
-  justify-content: space-around;
-  align-items: center;
-  text-decoration: none;
+footer a,
+footer a:active {
+  color: white;
 }
-footer .footer_links .footer_logos {
+footer .footerlogos {
+  background-color: black;
   color: black;
+}
+footer .copyright {
+  color: yellowgreen;
+  background-color: black;
+  font-family: "Playfair Display", serif;
+}
+
+@media screen and (max-width: 480px) {
+  header {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=codereview2.css.map */
