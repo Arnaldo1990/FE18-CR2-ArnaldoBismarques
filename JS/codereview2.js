@@ -72,16 +72,23 @@ for (let i = 0; i < btns.length; i++) {
     })
 
 }
+let number = 0;
+if (number <= 1) {
+    document.getElementById("color").style.backgroundColor = "green";
+} else if (number <= 3) {
+    document.getElementById("color").style.backgroundColor = "green";
+} else
+    document.getElementById("color").style.backgroundColor = "green";
 
-function printPrio() {
-    let importance = document.getElementsByClassName("numbers").value;
+// function printPrio() {
+//     let importance = document.getElementsByClassName("numbers").value;
 
-    document.getElementById("color").innerHTML = "<span id='color'>" + importance + "</span> ";
+//     document.getElementById("color").innerHTML = "<span id='color'>" + importance + "</span> ";
 
 
-    if (importance >= 1) {
-        document.getElementById("color").style.backgroundColor = "green";
-    } else {
-        document.getElementById("color").style.backgroundColor = "red";
-    }
-}
+//     if (importance == 1) {
+//         document.getElementById("color").style.backgroundColor = "green";
+//     } else {
+//         document.getElementById("color").style.backgroundColor = "red";
+//     }
+// }

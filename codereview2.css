@@ -46,4 +46,7 @@ footer .footer_links {
   justify-content: space-around;
   align-items: center;
   text-decoration: none;
+}
+footer .footer_links .footer_logos {
+  color: black;
 }/*# sourceMappingURL=codereview2.css.map */
