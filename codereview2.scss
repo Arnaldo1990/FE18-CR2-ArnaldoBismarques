@@ -3,6 +3,7 @@
             margin: 0;
             padding: 0;
             background-color: grey;
+            box-sizing: border-box;
         }
         
         body,
@@ -58,9 +59,9 @@
             }
         }
         
-        // MEDIA QUERRY 
-        @media screen and (max-width: 480px) {
-            header {
-                grid-template-columns: 1fr;
-            }
-        }
+        // // MEDIA QUERRY 
+        // @media screen and (max-width: 480px) {
+        //     {
+        //         grid-template-columns: 1fr;
+        //     }
+        // }

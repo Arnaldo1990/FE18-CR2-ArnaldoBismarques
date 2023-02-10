@@ -3,6 +3,7 @@
   margin: 0;
   padding: 0;
   background-color: grey;
+  box-sizing: border-box;
 }
 
 body,
@@ -49,10 +50,4 @@ footer .copyright {
   color: yellowgreen;
   background-color: black;
   font-family: "Playfair Display", serif;
-}
-
-@media screen and (max-width: 480px) {
-  header {
-    grid-template-columns: 1fr;
-  }
 }/*# sourceMappingURL=codereview2.css.map */
