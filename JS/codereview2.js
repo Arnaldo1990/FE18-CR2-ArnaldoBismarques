@@ -67,7 +67,10 @@ let btns = document.getElementsByClassName("importanceBtn");
 
 for (let i = 0; i < btns.length; i++) {
     btns[i].addEventListener("click", function() {
-        week[i].importance++;
+        if (week[i].importance < 5) {
+            week[i].importance++;
+        }
+
         document.getElementsByClassName("increase")[i].innerHTML = week[i].importance;
 
         if (week[i].importance >= 0 && week[i].importance <= 1) {
@@ -79,3 +82,42 @@ for (let i = 0; i < btns.length; i++) {
         }
     })
 }
+
+let sortbtn = document.getElementById("sorter");
+
+sortbtn.addEventListener("click", function() {
+    week.sort((a, b) => b.importance - a.importance);
+    // console.log(week);
+    document.getElementById("result").innerHTML = "";
+    for (let val of week) {
+        document.getElementById("result").innerHTML += `
+        <div>
+        <div class="card" style="width: 18rem;">
+        <img src="${val.pic}" class="card-img-top" alt="${val.taskName}">
+        <div class="card-body">
+          <h5 class="card-title">${val.taskName}</h5>
+          <p> ${val.description} </p>
+          <hr>
+          
+          <p> <i class="bi bi-arrow-right-square-fill"></i> <a href="javascript:void" class="btn btn-dark importanceBtn">Raise Priority </a><p class="increase">${val.importance}</p>
+          
+        </div>
+        </div>
+        </div>`;
+    }
+
+    for (let i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function() {
+            week[i].importance++;
+            document.getElementsByClassName("increase")[i].innerHTML = week[i].importance;
+
+            if (week[i].importance >= 0 && week[i].importance <= 1) {
+                document.getElementsByClassName("increase")[i].style.background = 'green';
+            } else if (week[i].importance >= 2 && week[i].importance <= 3) {
+                document.getElementsByClassName("increase")[i].style.background = 'yellow';
+            } else if (week[i].importance >= 4 && week[i].importance <= 5) {
+                document.getElementsByClassName("increase")[i].style.background = 'red';
+            }
+        })
+    }
+})
